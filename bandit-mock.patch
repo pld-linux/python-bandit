@@ -1,0 +1,182 @@
+--- bandit-1.6.2/tests/unit/cli/test_baseline.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/cli/test_baseline.py	2024-02-24 18:13:35.817326027 +0100
+@@ -19,7 +19,10 @@ import subprocess
+ 
+ import fixtures
+ import git
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit.cli.baseline as baseline
+--- bandit-1.6.2/tests/unit/cli/test_config_generator.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/cli/test_config_generator.py	2024-02-24 18:14:11.027135279 +0100
+@@ -17,7 +17,10 @@
+ import importlib
+ import logging
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ import yaml
+ 
+--- bandit-1.6.2/tests/unit/cli/test_main.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/cli/test_main.py	2024-02-24 18:14:37.853656614 +0100
+@@ -16,7 +16,10 @@ import logging
+ import os
+ 
+ import fixtures
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ from bandit.cli import main as bandit
+--- bandit-1.6.2/tests/unit/core/test_config.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/core/test_config.py	2024-02-24 18:15:18.673435475 +0100
+@@ -18,7 +18,10 @@ import textwrap
+ import uuid
+ 
+ import fixtures
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ from bandit.core import config
+--- bandit-1.6.2/tests/unit/core/test_context.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/core/test_context.py	2024-02-24 18:15:43.796632704 +0100
+@@ -16,7 +16,10 @@
+ 
+ import ast
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import six
+ import testtools
+ 
+--- bandit-1.6.2/tests/unit/core/test_issue.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/core/test_issue.py	2024-02-24 18:16:02.803196404 +0100
+@@ -14,7 +14,10 @@
+ # License for the specific language governing permissions and limitations
+ # under the License.
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit
+--- bandit-1.6.2/tests/unit/core/test_manager.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/core/test_manager.py	2024-02-24 18:16:27.039731770 +0100
+@@ -17,7 +17,10 @@
+ import os
+ 
+ import fixtures
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ from bandit.core import config
+--- bandit-1.6.2/tests/unit/core/test_test_set.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/core/test_test_set.py	2024-02-24 18:16:46.252961016 +0100
+@@ -14,7 +14,10 @@
+ #  License for the specific language governing permissions and limitations
+ #  under the License.
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ from stevedore import extension
+ import testtools
+ 
+--- bandit-1.6.2/tests/unit/formatters/test_html.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/formatters/test_html.py	2024-02-24 18:17:43.429317932 +0100
+@@ -17,7 +17,10 @@ import collections
+ import tempfile
+ 
+ import bs4
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit
+--- bandit-1.6.2/tests/unit/formatters/test_json.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/formatters/test_json.py	2024-02-24 18:18:08.525848639 +0100
+@@ -16,7 +16,10 @@ import collections
+ import json
+ import tempfile
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit
+--- bandit-1.6.2/tests/unit/formatters/test_screen.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/formatters/test_screen.py	2024-02-24 18:18:58.678910270 +0100
+@@ -16,7 +16,10 @@
+ import collections
+ import tempfile
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit
+--- bandit-1.6.2/tests/unit/formatters/test_text.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/formatters/test_text.py	2024-02-24 18:19:24.928768062 +0100
+@@ -16,7 +16,10 @@
+ import collections
+ import tempfile
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ 
+ import bandit
+--- bandit-1.6.2/tests/unit/formatters/test_yaml.py.orig	2019-06-15 08:47:40.000000000 +0200
++++ bandit-1.6.2/tests/unit/formatters/test_yaml.py	2024-02-24 18:19:43.488667514 +0100
+@@ -15,7 +15,10 @@
+ import collections
+ import tempfile
+ 
+-import mock
++try:
++    from unittest import mock
++except ImportError:
++    import mock
+ import testtools
+ import yaml
+ 
