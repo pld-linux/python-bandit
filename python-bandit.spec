@@ -106,7 +106,7 @@ Dokumentacja API modułu Pythona bandit.
 
 %prep
 %setup -q -n bandit-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %if %{with python2}
