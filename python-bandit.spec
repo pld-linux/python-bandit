@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Statyczny analizator kodu pythonowego zorientowany na bezpiec
 Name:		python-bandit
 # keep 1.6.x here for python2 support
 Version:	1.6.2
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/bandit/
